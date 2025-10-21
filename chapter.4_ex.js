@@ -48,6 +48,7 @@ function reverseArray(arr){
 }
 console.log(reverseArray([-3,5,6,7,8]));
 
+let arr = [3,4,5,6]
 function reverseArrayInPlace{
 
 }
