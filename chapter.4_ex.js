@@ -48,19 +48,42 @@ function reverseArray(arr){
 }
 console.log(reverseArray([-3,5,6,7,8]));
 
-let arr = [3,4,5,6]
-function reverseArrayInPlace{
-
+function reverseArrayInPlace(arr){
+for(let i = 0; i < Math.floor(arr.length / 2); i++){
+  let old = arr[i];
+  arr[i] = arr[arr.length - 1 - i];
+  arr[arr.length - 1 - i] = old;
+ }return arr
 }
-
+console.log(reverseArrayInPlace(["A","B","C","D"]));
 
 //3. A list
 /*Write a function arrayToList that builds a list structure from an array.
 Also write listToArray, prepend, and nth as helper functions to work with the list.*/
+function arrayToList(array){
+  let list = null
+ for(let i = array.length - 1; i >= 0; i--){
+  list = {value : array[i], rest: list};
+  }return list;
+}
+console.log(arrayToList([10,20,30]));
+
+function listToArray(list){
+  let array = [];
+  for(let node = list; node; node = node.rest) {
+    array.push(node.value);
+  }return array;
+}
+console.log(listToArray(arrayToList([10,20,30])));
 
 //4. Deep comparison
 /*Write a function deepEqual(a, b) that returns true only if a and b have the same value or identical properties recursively.
 Handle cases where values are null or non-object types.*/
+function deepEqual(a,b){
+  if(a = b){
+    return true;
+  }
+}
 
 //5. Flattening
 /*Use the reduce method in combination with concat to flatten an array of arrays into a single array containing all elements of the 
