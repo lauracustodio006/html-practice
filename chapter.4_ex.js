@@ -80,8 +80,10 @@ console.log(listToArray(arrayToList([10,20,30])));
 /*Write a function deepEqual(a, b) that returns true only if a and b have the same value or identical properties recursively.
 Handle cases where values are null or non-object types.*/
 function deepEqual(a,b){
-  if(a = b){
+  if(a === b){
     return true;
+  }if (a.node === b.node){
+    return true
   }
 }
 
@@ -89,30 +91,10 @@ function deepEqual(a,b){
 /*Use the reduce method in combination with concat to flatten an array of arrays into a single array containing all elements of the 
 original subarrays.*/
 
-//6. Looping a triangle
-/*Write a loop that makes seven calls to console.log to output the following triangle:
-
-#
-##
-###
-####
-#####
-######
-#######
-*/
-
-//7. FizzBuzz
-/*Write a program that prints the numbers from 1 to 100.
-But for multiples of three, print "Fizz" instead of the number, and for multiples of five, print "Buzz".
-For numbers that are multiples of both three and five, print "FizzBuzz".*/
-
 //8. The sum of even numbers
 /*Write a function sumEvenNumbers(array) that takes an array of numbers and returns the sum of only the even ones.*/
 
-//9. Counting characters
-/*Write a function countChar(string, char) that counts how many times char appears in string.
-Next, write countBs(string) that counts how many uppercase “B” characters there are.*/
-
 //10. The dominant writing direction
-/*Write a function dominantDirection(text) that computes the dominant writing direction in a string of text (left-to-right, right-to-left, or top-to-bottom).
+/*Write a function dominantDirection(text) that computes the dominant writing direction in a string of text (left-to-right, right-to-left,
+ or top-to-bottom).
 You can use the characterScript and countBy helper functions from the text scripts example in Eloquent JavaScript.*/
